@@ -1,0 +1,13 @@
+.finishedItem{
+    position: relative;
+}
+.finishedItem::before{
+    content:"";
+    display: block;
+    position:absolute;
+    left:0;
+    right:0;
+    rotate: 3deg;
+    height: 2px;
+    background-color: rgb(156, 163, 175);
+}
