@@ -19,7 +19,7 @@ export const TodoList:FC<todoListProps> = ({data,deleteTodoItem,handdleFinished}
       <h2 className='text-[#ffaf42] font-bold text-2xl'>todo</h2>
       {(finishedArr.length===0&&needToDoArr.length===0 )? "设置你的第一个任务把" :
       needToDoArr.length===0?"已完成所有任务,快制定下一个任务把！":needToDoArr.map(val=> <TodoItem data={val}   key={val.id} deleteTodoItem={deleteTodoItem} handdleFinished={handdleFinished}/>)}
-      <h2 className='text-[#ffaf42] mt-6 font-bold text-2xl'>finished</h2>
+      <h2 className='text-[#ffaf42] mt-6 font-bold text-2xl'>{finishedArr.length==0?"":"finished"}</h2>
       {finishedArr.map(val=> <FinishedItem data={val} key={val.id} deleteTodoItem={deleteTodoItem} handdleFinished={handdleFinished}/>)}
       </div>
   )
